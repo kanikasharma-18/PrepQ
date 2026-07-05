@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import DotField from './DotField'
 
 function Hero() {
   return (
@@ -11,7 +12,25 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#fafafa]/50 to-[#fafafa] dark:via-[#08080a]/50 dark:to-[#08080a] pointer-events-none z-0" />
       <div className="absolute top-10 left-1/2 -translate-x-1/2 h-80 w-[42rem] bg-accent-100/30 dark:bg-accent-500/5 blur-3xl rounded-full pointer-events-none z-0" />
 
-      <div className="relative max-w-3xl mx-auto z-10">
+      {/* DotField background layer — sits behind all hero content */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <DotField
+          dotRadius={1.3}
+          dotSpacing={26}
+          bulgeStrength={40}
+          glowRadius={140}
+          sparkle={false}
+          waveAmplitude={0}
+          cursorRadius={220}
+          cursorForce={0.1}
+          bulgeOnly
+          gradientFrom="rgba(99, 102, 241, 0.10)"
+          gradientTo="rgba(99, 102, 241, 0.04)"
+          glowColor="rgba(99, 102, 241, 0.15)"
+        />
+      </div>
+
+      <div className="relative max-w-3xl mx-auto z-10" style={{ position: 'relative', zIndex: 1 }}>
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
