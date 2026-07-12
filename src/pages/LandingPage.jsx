@@ -7,7 +7,7 @@ import Footer from '../components/Footer.jsx'
 
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#fafafa] dark:bg-[#08080a] text-neutral-900 dark:text-neutral-50 transition-colors duration-500 overflow-hidden relative">
+    <div className="min-h-screen bg-transparent dark:bg-transparent text-neutral-900 dark:text-neutral-50 transition-colors duration-500 overflow-hidden relative">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid pointer-events-none opacity-[0.55] dark:opacity-[0.25] z-0" />
       
