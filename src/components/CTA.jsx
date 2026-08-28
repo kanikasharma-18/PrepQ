@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 function CTA() {
@@ -46,9 +47,12 @@ function CTA() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8"
           >
-            <button className="px-7 py-3.5 rounded-full bg-gradient-to-b from-neutral-900 to-black dark:from-white dark:to-neutral-100 text-white dark:text-neutral-950 text-sm font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.12),0_12px_24px_rgba(0,0,0,0.06)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 cursor-pointer">
+            <Link
+              to="/signup"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-gradient-to-b from-neutral-900 to-black dark:from-white dark:to-neutral-100 text-white dark:text-neutral-950 text-sm font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.12),0_12px_24px_rgba(0,0,0,0.06)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 cursor-pointer"
+            >
               Get Started Free
-            </button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

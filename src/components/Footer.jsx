@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom'
+
 const links = ['GitHub', 'Privacy', 'Terms', 'Contact'];
 
 function Footer() {
   return (
     <footer className="px-6 py-12 border-t border-black/[0.04] dark:border-white/[0.06] bg-neutral-50/20 dark:bg-neutral-950/20">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        <span className="text-sm font-bold tracking-tight text-neutral-950 dark:text-white">
+        <Link to="/" className="text-sm font-bold tracking-tight text-neutral-950 dark:text-white hover:opacity-80 transition-opacity">
           Prep<span className="text-accent-500">Q</span>
-        </span>
+        </Link>
 
         <ul className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-neutral-500 dark:text-neutral-450">
           {links.map((link) => (

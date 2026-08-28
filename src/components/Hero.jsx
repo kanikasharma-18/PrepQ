@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
@@ -36,17 +37,23 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="group relative inline-flex items-center justify-center gap-2 px-6.5 py-3 rounded-full bg-gradient-to-b from-neutral-900 to-black dark:from-white dark:to-neutral-100 text-white dark:text-neutral-950 text-sm font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.12),0_12px_24px_rgba(0,0,0,0.06)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 cursor-pointer">
+          <Link
+            to="/signup"
+            className="group relative inline-flex items-center justify-center gap-2 px-6.5 py-3 rounded-full bg-gradient-to-b from-neutral-900 to-black dark:from-white dark:to-neutral-100 text-white dark:text-neutral-950 text-sm font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.12),0_12px_24px_rgba(0,0,0,0.06)] hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 cursor-pointer"
+          >
             Get Started
             <ArrowRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </button>
+          </Link>
           
-          <button className="px-6.5 py-3 rounded-full border border-black/[0.08] dark:border-white/[0.08] bg-white/50 dark:bg-white/[0.02] backdrop-blur-sm text-sm font-semibold text-neutral-700 dark:text-neutral-350 hover:text-neutral-950 dark:hover:text-white hover:bg-white/80 dark:hover:bg-white/[0.06] hover:border-black/15 dark:hover:border-white/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer">
+          <a
+            href="#features"
+            className="px-6.5 py-3 rounded-full border border-black/[0.08] dark:border-white/[0.08] bg-white/50 dark:bg-white/[0.02] backdrop-blur-sm text-sm font-semibold text-neutral-700 dark:text-neutral-350 hover:text-neutral-950 dark:hover:text-white hover:bg-white/80 dark:hover:bg-white/[0.06] hover:border-black/15 dark:hover:border-white/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
+          >
             Learn More
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

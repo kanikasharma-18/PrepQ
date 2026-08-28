@@ -1,12 +1,15 @@
+import { Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
+import SignupPage from './pages/SignupPage.jsx'
 import DotField from './components/DotField.jsx'
 import './App.css'
 
 function App() {
   return (
     <>
-      {/* DotField — fixed full-viewport dot grid, sibling of LandingPage so it
-          is never clipped by LandingPage's overflow-hidden or its background */}
+      {/* DotField — fixed full-viewport dot grid, sibling of pages so it
+          is never clipped by page overflow-hidden or background */}
       <div
         style={{
           position: 'fixed',
@@ -33,7 +36,11 @@ function App() {
         />
       </div>
 
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
     </>
   )
 }
