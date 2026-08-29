@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Eye, EyeOff, Lock, Mail, User, ArrowRight } from 'lucide-react'
 import AuthHeader from '../components/AuthHeader.jsx'
 
 function SignupPage() {
+  const navigate = useNavigate()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -58,13 +59,11 @@ function SignupPage() {
 
     setIsSubmitting(true)
 
-    // Clean separation of auth logic — ready for backend API integration
+    // Mock frontend auth — navigate to dashboard after a short delay.
+    // Replace this with a real backend API call when the backend is ready.
     setTimeout(() => {
       setIsSubmitting(false)
-      setAuthStatus({
-        type: 'info',
-        message: 'Account creation form validated cleanly. Backend user registration API integration is ready to be connected.'
-      })
+      navigate('/dashboard')
     }, 600)
   }
 
