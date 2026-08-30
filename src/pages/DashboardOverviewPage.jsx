@@ -79,21 +79,17 @@ function SidebarContent({ collapsed, onToggle, onClose }) {
           className="flex items-center gap-2 group cursor-pointer min-w-0"
           onClick={onClose}
         >
-          {/* Always show the "P" monogram icon */}
-          <span className="shrink-0 w-6 h-6 rounded-md bg-neutral-900 dark:bg-white flex items-center justify-center text-white dark:text-neutral-950 text-[11px] font-extrabold leading-none select-none">
-            P
-          </span>
-          {/* Wordmark fades out when collapsed */}
-          <span
-            className="font-bold tracking-tight text-neutral-900 dark:text-white text-[15px] whitespace-nowrap overflow-hidden"
-            style={{
-              maxWidth: collapsed ? 0 : 120,
-              opacity: collapsed ? 0 : 1,
-              transition: `opacity 0.15s ease, max-width 0.25s ${EASE}`,
-            }}
-          >
-            rep<span className="text-accent-500">Q</span>
-          </span>
+          {!collapsed && (
+            <span className="font-bold tracking-tight text-neutral-900 dark:text-white text-[15px] whitespace-nowrap overflow-hidden transition-all duration-200">
+              Prep<span className="text-accent-500">Q</span>
+            </span>
+          )}
+
+          {collapsed && (
+            <span className="shrink-0 w-6 h-6 rounded-md bg-neutral-900 dark:bg-white flex items-center justify-center text-white dark:text-neutral-950 text-[11px] font-extrabold leading-none select-none">
+              P
+            </span>
+          )}
         </Link>
 
         {/* Collapse toggle — desktop only */}
