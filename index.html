@@ -1,11 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="PrepQ transforms your daily activity and coding projects into personalized developer insights, weak area analysis, and actionable growth plans." />
     <title>PrepQ — Personalized Developer Growth & Activity Insights</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('theme')
+        const prefersDark = savedTheme ? savedTheme === 'dark' : true
+        document.documentElement.classList.toggle('dark', prefersDark)
+      })()
+    </script>
     
     <!-- Google Fonts: Geist for UI/Body & Plus Jakarta Sans for headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
